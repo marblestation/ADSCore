@@ -8,3 +8,4 @@ redis==3.3.8
 Flask-Limiter==1.0.1
 dnspython3==1.15.0
 fakeredis==1.0.5
+six==1.12.0
