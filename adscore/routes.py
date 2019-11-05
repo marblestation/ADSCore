@@ -155,7 +155,7 @@ def classic_form():
     if query:
         return redirect(url_for('search', q=query))
     else:
-        return render_template('classic-form.html', environment=current_app.config['ENVIRONMENT'], base_url=app.config['SERVER_BASE_URL'], auth=session['auth'], form=form)
+        return render_template('classic-form.html', environment=current_app.config['ENVIRONMENT'], base_url=app.config['SERVER_BASE_URL'], auth=session['auth'], form=form, sort_options=current_app.config['SORT_OPTIONS'])
 
 @app.route(app.config['SERVER_BASE_URL']+'paper-form', methods=['GET', 'POST'], strict_slashes=False)
 def paper_form():

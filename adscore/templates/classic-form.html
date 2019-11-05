@@ -94,6 +94,25 @@
                     placeholder="Comma-separated bibstems of journal titles">
             </div>
 
+            <div data-field="sort" class="clearfix">
+                <div class="col-sm-6">
+                  <label for="sort-container">Sort</label>
+                    <div class="sort-container">
+                        <input id='fav' type='checkbox'>
+                        <label for='fav'>
+                          <i class="fa fa-sort-amount-desc"></i>
+                          <i class="fa fa-sort-amount-asc"></i>
+                        </label>
+                        <select>
+                            {% for opt in sort_options %}
+                            <option value="{{ opt.id }}" title="{{ opt.description }}">{{ opt.text }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
             <!--<div class="pull-right">
             <button class="btn btn-primary" type="submit" style="transition: none;"><i class="fa fa-search"></i> Search</button>
         </div>-->
