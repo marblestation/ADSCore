@@ -32,3 +32,5 @@ def create_app(**config):
 app = create_app()
 limiter = Limiter(app, key_func=get_remote_address)
 redis_client = FlaskRedisPool(app)
+if app.config['ENVIRONMENT'] == "localhost":
+    app.debug = True
